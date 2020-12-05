@@ -17,7 +17,7 @@
 	<%@include file="navbar.jsp" %>
 	<h1>All Notes Page</h1>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-sm-12">
 				<%
 					Session s = FactoryProvider.getFactory().openSession();
 					Query q = s.createQuery("from Note");
@@ -31,7 +31,7 @@
 					    <h5 class="card-title"><%=n.getTitle()%></h5>
 					    <p class="card-text"><%=n.getContent()%></p>
 					    <div class="container text-center mt-2">
-					    <a href="#" class="btn btn-danger">Delete Note</a>
+					    <a href="DeleteServlet?id=<%=n.getId()%>" class="btn btn-danger">Delete Note</a>
 					    <a href="#" class="btn btn-primary">Update Note</a>
 					    </div>
 					  </div>
@@ -39,7 +39,8 @@
 				
 				<% 
 					}
-					s.close();%>
+					s.close();
+				%>
 				
 		</div>
 	</div>
