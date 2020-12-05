@@ -32,7 +32,7 @@
 					    <p class="card-text"><%=n.getContent()%></p>
 					    <div class="container text-center mt-2">
 					    <a href="DeleteServlet?id=<%=n.getId()%>" class="btn btn-danger">Delete Note</a>
-					    <a href="#" class="btn btn-primary">Update Note</a>
+					    <a href="update.jsp?id=<%=n.getId()%>" class="btn btn-primary">Update Note</a>
 					    </div>
 					  </div>
 					</div>
