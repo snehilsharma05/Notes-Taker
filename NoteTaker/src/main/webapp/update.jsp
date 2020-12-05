@@ -18,9 +18,10 @@
     		Note note = (Note)s.get(Note.class, note_id);
     	%>
     	<form action="UpdateServlet" method="post">
+    	<input value="<%=note.getId()%>" type="hidden"  name="hidden_id" />
 		  <div class="form-group">
 		    <label for="title">Note title</label>
-		    <input type="text" class="form-control" name="title" id="title" placeholder="Enter here" value="<%=note.getTitle()%>" />
+		    <input type="text" class="form-control" name="title" id="title" value="<%=note.getTitle()%>" />
 		  </div>
 		  <div class="form-group">
 		    <label for="content">Content</label>

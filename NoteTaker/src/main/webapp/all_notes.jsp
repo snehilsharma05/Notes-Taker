@@ -14,8 +14,8 @@
 </head>
 <body>
 	<div class="container">
-	<%@include file="navbar.jsp" %>
-	<h1>All Notes Page</h1>
+	<%@include file="navbar.jsp" %><br>
+	<h1>All Notes:</h1>
 	<div class="row">
 		<div class="col-sm-12">
 				<%
@@ -30,6 +30,7 @@
 					  <div class="card-body">
 					    <h5 class="card-title"><%=n.getTitle()%></h5>
 					    <p class="card-text"><%=n.getContent()%></p>
+					    <p ><b class="text-primary">Last Edited: <%=n.getAddedDate().toLocaleString() %></b></p>
 					    <div class="container text-center mt-2">
 					    <a href="DeleteServlet?id=<%=n.getId()%>" class="btn btn-danger">Delete Note</a>
 					    <a href="update.jsp?id=<%=n.getId()%>" class="btn btn-primary">Update Note</a>
